@@ -1,9 +1,13 @@
 # Chain of Thought Prompting example
 
+import os
+from dotenv import load_dotenv
 from openai import OpenAI
 
+load_dotenv()
+
 client = OpenAI(
-    api_key="AIzaSyBgPk8G_McqxZnHdG_yK7Xf7e1Iy-lYsLI",
+    api_key=os.getenv("OPENAI_API_KEY"),
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
